@@ -21,29 +21,49 @@ limitations under the License.
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <artifactId>flume-parent</artifactId>
+    <artifactId>flume-ng-sources</artifactId>
     <groupId>org.apache.flume</groupId>
     <version>1.4.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>org.apache.flume</groupId>
-  <artifactId>flume-ng-sources</artifactId>
-  <name>Flume Sources</name>
-  <packaging>pom</packaging>
+  <groupId>org.apache.flume.flume-ng-sources</groupId>
+  <artifactId>flume-udp-source</artifactId>
+  <name>Flume UDP Source</name>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.rat</groupId>
-        <artifactId>apache-rat-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
+  <dependencies>
 
-  <modules>
-    <module>flume-scribe-source</module>
-    <module>flume-jms-source</module>
-    <module>flume-udp-source</module>
-  </modules>
+    <dependency>
+      <groupId>org.apache.flume</groupId>
+      <artifactId>flume-ng-sdk</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.flume</groupId>
+      <artifactId>flume-ng-configuration</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.flume</groupId>
+      <artifactId>flume-ng-core</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
 
 </project>
